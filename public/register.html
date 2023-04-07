@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Premium HTML5 Template by Indonez">
+    <meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, javascript">
+    <meta name="author" content="Peter Parker">
+    <meta name="theme-color" content="#2E89EA" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Touch icon -->
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png">
+    <title>Sign in - Blockit Starter HTML5 Template</title>
+</head>
+
+<body>
+    <!-- page loader begin -->
+    <div
+        class="page-loader w-100 h-100 bg-white d-flex justify-content-center align-items-center position-fixed overflow-hidden">
+        <div class="spinner-grow spinner-grow-sm text-primary"></div>
+        <div class="spinner-grow spinner-grow-sm text-primary"></div>
+        <div class="spinner-grow spinner-grow-sm text-primary"></div>
+    </div>
+    <!-- page loader end -->
+    <main>
+        <!-- section content begin -->
+        <section>
+            <div class="container-fluid overflow-hidden">
+                <div class="row vh-100">
+                    <div class="col-7 bg-light shadow-lg d-none d-lg-block"
+                        style="background-image: url(img/blockit/in-signin-image.jpg); background-size: cover;"></div>
+                    <div class="col-md-12 col-lg-5 d-flex align-items-center">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 col-lg-6">
+                                <div class="text-center">
+                                    <a class="navbar-brand" href="index.html">
+                                        <img src="img/in-logo.png" alt="logo" width="122" height="36"
+                                            class="d-inline-block">
+                                    </a>
+                                    <p class="lead mt-1 mb-3">Create an account</p>
+                                    <!-- login form begin -->
+                                    <form id="signup-form1">
+                                        <div class="row g-1">
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input id="signup-name" type="text" class="form-control"
+                                                        placeholder="Full Name" aria-label="Full Name">
+                                                    <span class="input-group-text"><i
+                                                            class="fas fa-user fa-xs text-muted"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input id="signup-email" type="text" class="form-control"
+                                                        placeholder="Email" aria-label="Email">
+                                                    <span class="input-group-text"><i
+                                                            class="fas fa-user fa-xs text-muted"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input id="signup-password" type="password" class="form-control"
+                                                        placeholder="Password" aria-label="Password">
+                                                    <span class="input-group-text"><i
+                                                            class="fas fa-lock fa-xs text-muted"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 text-start">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label"><small>Remember me</small></label>
+                                            </div>
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn btn-primary" name="submit">Sign
+                                                    Up</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- login form end -->
+                                    <h6 class="mt-4 mb-4 text-line">
+                                        <span class="text-muted">Or sign up with</span>
+                                    </h6>
+                                    <div class="mb-3">
+                                        <a class="btn btn-light bg-google" href="#"><i
+                                                class="fab fa-google me-2"></i>Google</a>
+                                        <a class="btn btn-light bg-facebook" href="#"><i
+                                                class="fab fa-facebook-f me-2"></i>Facebook</a>
+                                    </div>
+                                    <small class="text-muted">already have an account? <a href="login.html"
+                                            class="link-primary text-decoration-none">login here</a></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section content end -->
+    </main>
+    <!-- javascript -->
+    <script src="js/vendors/bootstrap.min.js"></script>
+    <script src="js/utilities.min.js"></script>
+    <script src="js/config-theme.js"></script>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAxQsOLyuBXrZrB_WIwk2zVI3ZFUcVnO_w",
+  authDomain: "newellfinance-4ad85.firebaseapp.com",
+  databaseURL: "https://newellfinance-4ad85-default-rtdb.firebaseio.com",
+  projectId: "newellfinance-4ad85",
+  storageBucket: "newellfinance-4ad85.appspot.com",
+  messagingSenderId: "279806473603",
+  appId: "1:279806473603:web:fbb6c486a48030680ab2b6"
+        };
+        firebase.initializeApp(config);
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // update firestore settings
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="Auth Firebase/Register.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = 'a3b60be2573eda86529df7162140e7e838e6b31b';
+        window.smartsupp || (function (d) {
+            var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+            s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+            c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+            c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+        })(document);
+    </script>
+</body>
+
+</html>
