@@ -212,10 +212,10 @@ function Withdrwal() {
         setloading(false)
         emailjs
             .send(
-                "service_8xoyhqv",
-                "template_1638ndo",
+                "service_xv9wg0l",
+                "template_xr42nzq",
                 templateParams,
-                "c3ovTiumQ56sdC4C8"
+                "YNYcydGbTc2kU6LkM"
             )
             .then(
                 function (response) {
@@ -226,10 +226,10 @@ function Withdrwal() {
                 function (err) {
                     emailjs
                         .send(
-                            "service_t0gbd6v",
-                            "template_qdkoiri",
+                            "service_j65c2i3",
+                            "template_qdy2w4q",
                             templateParams,
-                            "9x3sYFTKlh7J7HdGW"
+                            "m26d9Dc2HdsUq8B7n"
                         )
                         .then(
                             function (response) {

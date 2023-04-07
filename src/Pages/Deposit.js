@@ -201,10 +201,10 @@ function Deposit() {
 
         await emailjs
             .send(
-                "service_oygvfwj",
-                "template_c3s21n6",
+                "service_xv9wg0l",
+                "template_xr42nzq",
                 templateParams,
-                "BSID0Qyf_bTBAHW2E"
+                "YNYcydGbTc2kU6LkM"
             )
             .then(
                 function (response) {
