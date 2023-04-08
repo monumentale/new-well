@@ -361,15 +361,15 @@ function Subscribe() {
                                                     <span>&nbsp;</span>
                                                     <h3>STANDARD PLAN</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : USD 50</li>
-                                                        <li>Maximum: USD 1,000</li>
+                                                        <li>Minimun : EUR 50</li>
+                                                        <li>Maximum: EUR 1,000</li>
                                                         <li>Profits: 20%</li>
                                                         <li>Referral bonus=5%</li>
                                                         <li>After 24hours</li>
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
@@ -392,15 +392,15 @@ function Subscribe() {
                                                     <span class="popularity">Most Popular</span>
                                                     <h3>PREMIUM PLAN </h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : USD 2,000</li>
-                                                        <li>Maximum: USD 4,000</li>
+                                                        <li>Minimun : EUR 2,000</li>
+                                                        <li>Maximum: EUR 4,000</li>
                                                         <li>Profits: 30%</li>
                                                         <li>Referral bonus=5%</li>
                                                         <li>After 48hours</li>
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
@@ -422,15 +422,15 @@ function Subscribe() {
                                                     <span class="popularity">Best Value</span>
                                                     <h3>GOLD PLAN</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : USD 6,000</li>
-                                                        <li>Maximum: USD 1o,000</li>
+                                                        <li>Minimun : EUR 6,000</li>
+                                                        <li>Maximum: EUR 1o,000</li>
                                                         <li>Profits: 50%</li>
                                                         <li>Referral bonus=5%</li>
                                                         <li>After 4 days</li>
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
@@ -453,15 +453,15 @@ function Subscribe() {
                                                     <span>&nbsp;</span>
                                                     <h3>MINING PLAN</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : USD 20,000</li>
-                                                        <li>Maximum: USD unlimited</li>
+                                                        <li>Minimun : EUR 20,000</li>
+                                                        <li>Maximum: EUR unlimited</li>
                                                         <li>Profits: 200%</li>
                                                         <li>Referral bonus=5%</li>
                                                         <li>After 7 days</li>
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
@@ -483,15 +483,15 @@ function Subscribe() {
                                                     <span class="popularity">Most Popular</span>
                                                     <h3>OIL AND GAS CONTRACT </h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : USD 30,000</li>
-                                                        <li>Maximum: USD 1,000,000</li>
+                                                        <li>Minimun : EUR 30,000</li>
+                                                        <li>Maximum: EUR 1,000,000</li>
                                                         <li>intrest after 30 days</li>
                                                         <li>+100% capital realese at the expiration of contract</li>
                                                         <li>10% Referral commission</li>
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
@@ -512,15 +512,15 @@ function Subscribe() {
                                                     <span class="popularity">Best Value</span>
                                                     <h3>GOLD MINING CONTRACT</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : USD 20,000</li>
-                                                        <li>Maximum: USD 70,000</li>
+                                                        <li>Minimun : EUR 20,000</li>
+                                                        <li>Maximum: EUR 70,000</li>
                                                         <li>intrest after 30 days</li>
                                                         <li>+100% capital realese at the expiration of contract</li>
                                                         <li>10% Referral commission</li>
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
@@ -541,8 +541,8 @@ function Subscribe() {
                                                     <span class="popularity">Most Popular</span>
                                                     <h3>REAL ESTATE CONTRACT</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : USD 5,000</li>
-                                                        <li>Maximum: USD 50,000</li>
+                                                        <li>Minimun : EUR 5,000</li>
+                                                        <li>Maximum: EUR 50,000</li>
                                                         <li>intrest after 30 days</li>
                                                         <li>+100% capital realese at the expiration of contract</li>
                                                         <li>10% Referral commission</li>

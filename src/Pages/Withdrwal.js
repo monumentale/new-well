@@ -189,12 +189,12 @@ function Withdrwal() {
                mso-line-height-rule: exactly; font-family: arial,'helvetica neue', helvetica, sans-serif; line-height: 21px; color: #333333;
                font-size: 14px;">we wish to inform you that the following transaction occured on your account
                   <br ></br>
-                  Your Withdrawal of ${Coinequivalent == "" ? Amount : parseFloat(Amount) / parseFloat(Coinequivalent)} ${coin} ($${Amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}) has been processed
+                  Your Withdrawal of ${Coinequivalent == "" ? Amount : parseFloat(Amount) / parseFloat(Coinequivalent)} ${coin} (€${Amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}) has been processed
                   <br ></br>
                   Transaction Type: Withdrawn from ${investmentselected}
                   <br ></br>
                   <br ></br>
-                  Amount:$${Amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                  Amount:€${Amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   <br ></br>
                   <br ></br>
                   Description: Fund Withdrawal BY ${userdetails.fullname}
@@ -357,8 +357,8 @@ function Withdrwal() {
                                                 <div className="p-3 rounded card bg-light">
                                                     <div className="card-body border-danger">
                                                         <h2 className="card-title mb-3 text-dark"> Bitcoin</h2>
-                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> $10</strong></h4><br />
-                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> $10,000,000</strong></h4><br />
+                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> €10</strong></h4><br />
+                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> €10,000,000</strong></h4><br />
                                                         <h4 className="text-dark">Charge Type:<strong style={{ float: 'right' }}>percentage</strong></h4><br />
                                                         <h4 className="text-dark">Charges Amount:
                                                             <strong style={{ float: 'right' }}>
@@ -384,8 +384,8 @@ function Withdrwal() {
                                                 <div className="p-3 rounded card bg-light">
                                                     <div className="card-body border-danger">
                                                         <h2 className="card-title mb-3 text-dark"> Ethereum</h2>
-                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> $10</strong></h4><br />
-                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> $10,000,000</strong></h4><br />
+                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> €10</strong></h4><br />
+                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> €10,000,000</strong></h4><br />
                                                         <h4 className="text-dark">Charge Type:<strong style={{ float: 'right' }}>percentage</strong></h4><br />
                                                         <h4 className="text-dark">Charges Amount:
                                                             <strong style={{ float: 'right' }}>
@@ -412,8 +412,8 @@ function Withdrwal() {
                                                 <div className="p-3 rounded card bg-light">
                                                     <div className="card-body border-danger">
                                                         <h2 className="card-title mb-3 text-dark"> Doge</h2>
-                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> $10</strong></h4><br />
-                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> $10,000,000</strong></h4><br />
+                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> €10</strong></h4><br />
+                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> €10,000,000</strong></h4><br />
                                                         <h4 className="text-dark">Charge Type:<strong style={{ float: 'right' }}>percentage</strong></h4><br />
                                                         <h4 className="text-dark">Charges Amount:
                                                             <strong style={{ float: 'right' }}>
@@ -441,8 +441,8 @@ function Withdrwal() {
                                                 <div className="p-3 rounded card bg-light">
                                                     <div className="card-body border-danger">
                                                         <h2 className="card-title mb-3 text-dark"> Tron</h2>
-                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> $10</strong></h4><br />
-                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> $10,000,000</strong></h4><br />
+                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> €10</strong></h4><br />
+                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> €10,000,000</strong></h4><br />
                                                         <h4 className="text-dark">Charge Type:<strong style={{ float: 'right' }}>percentage</strong></h4><br />
                                                         <h4 className="text-dark">Charges Amount:
                                                             <strong style={{ float: 'right' }}>
@@ -466,8 +466,8 @@ function Withdrwal() {
                                                 <div className="p-3 rounded card bg-light">
                                                     <div className="card-body border-danger">
                                                         <h2 className="card-title mb-3 text-dark"> USDT ERC20</h2>
-                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> $10</strong></h4><br />
-                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> $10,000,000</strong></h4><br />
+                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> €10</strong></h4><br />
+                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> €10,000,000</strong></h4><br />
                                                         <h4 className="text-dark">Charge Type:<strong style={{ float: 'right' }}>percentage</strong></h4><br />
                                                         <h4 className="text-dark">Charges Amount:
                                                             <strong style={{ float: 'right' }}>
@@ -492,8 +492,8 @@ function Withdrwal() {
                                                 <div className="p-3 rounded card bg-light">
                                                     <div className="card-body border-danger">
                                                         <h2 className="card-title mb-3 text-dark"> USDT TRC 20</h2>
-                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> $10</strong></h4><br />
-                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> $10,000,000</strong></h4><br />
+                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> €10</strong></h4><br />
+                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> €10,000,000</strong></h4><br />
                                                         <h4 className="text-dark">Charge Type:<strong style={{ float: 'right' }}>percentage</strong></h4><br />
                                                         <h4 className="text-dark">Charges Amount:
                                                             <strong style={{ float: 'right' }}>

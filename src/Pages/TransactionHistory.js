@@ -126,7 +126,7 @@ function TransactionHistory() {
                                                                     userdetails.Deposithistory.map((obj, i) => (
 
                                                                         <tr className="del237">
-                                                                            <td>$ {obj.amt}</td>
+                                                                            <td>€ {obj.amt}</td>
                                                                             <td>{obj.coin}</td>
                                                                             <td>{new Date(obj.date).toDateString()}</td>
                                                                             <td>{obj.mode}</td>
@@ -159,7 +159,7 @@ function TransactionHistory() {
                                                                     userdetails.withdrawalhistory.map((obj, i) => (
 
                                                                         <tr className="del237">
-                                                                            <td>$ {obj.amt}</td>
+                                                                            <td>€ {obj.amt}</td>
 
                                                                             <td>{new Date(obj.date).toDateString()}</td>
                                                                             <td>{obj.status}</td>
@@ -188,7 +188,7 @@ function TransactionHistory() {
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td>$0</td>
+                                                                <td>€0</td>
                                                                 <td>Bonus</td>
                                                                 <td>SignUp Bonus</td>
 
