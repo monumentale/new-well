@@ -647,23 +647,60 @@
                             <div class="col">
                                 <div class="card card-body px-4">
                                     <h3 class="text-white text-center mt-1">Start investing now.</h3>
-                                    <form class="row g-1 mb-2">
+                                    <!-- <form class="row g-1 mb-2" id="signup-form1">
                                         <div class="col-12">
-                                            <input class="form-control" id="fullname" name="fullname" type="text"
+                                            <input class="form-control" id="signup-name" name="fullname" type="text"
                                                 placeholder="Full Name" aria-label="Full Name" required="">
                                         </div>
                                         <div class="col-12">
-                                            <input class="form-control" id="emailaddress" name="emailadrress"
+                                            <input class="form-control" id="signup-email" name="emailadrress"
                                                 type="text" placeholder="Email address" aria-label="Email address"
                                                 required="">
                                         </div>
                                         <div class="col-12">
-                                            <input class="form-control" id="phonenumber" name="phonenumber" type="text"
-                                                placeholder="Phone Number" aria-label="Phone Number" required="">
+                                            <input class="form-control" id="signup-password" name="phonenumber"
+                                                type="password" placeholder="Password" aria-label="Password"
+                                                required="">
                                         </div>
                                         <div class="d-grid">
                                             <button class="btn btn-info" id="sendemail" type="submit"
                                                 name="submit">Create Account</button>
+                                        </div>
+                                    </form> -->
+                                    <form id="signup-form1">
+                                        <div class="row g-1">
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input id="signup-name" type="text" class="form-control"
+                                                        placeholder="Full Name" aria-label="Full Name">
+                                                    <span class="input-group-text"><i
+                                                            class="fas fa-user fa-xs text-muted"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input id="signup-email" type="text" class="form-control"
+                                                        placeholder="Email" aria-label="Email">
+                                                    <span class="input-group-text"><i
+                                                            class="fas fa-user fa-xs text-muted"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input id="signup-password" type="password" class="form-control"
+                                                        placeholder="Password" aria-label="Password">
+                                                    <span class="input-group-text"><i
+                                                            class="fas fa-lock fa-xs text-muted"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 text-start">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label"><small>Remember me</small></label>
+                                            </div>
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn btn-primary" name="submit">Sign
+                                                    Up</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -3383,6 +3420,41 @@
     </script>
     <script defer src="hs/hsstatic/HubspotToolsMenu/static-1.119/js/index.js"></script>
     <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAxQsOLyuBXrZrB_WIwk2zVI3ZFUcVnO_w",
+            authDomain: "newellfinance-4ad85.firebaseapp.com",
+            databaseURL: "https://newellfinance-4ad85-default-rtdb.firebaseio.com",
+            projectId: "newellfinance-4ad85",
+            storageBucket: "newellfinance-4ad85.appspot.com",
+            messagingSenderId: "279806473603",
+            appId: "1:279806473603:web:fbb6c486a48030680ab2b6"
+        };
+        firebase.initializeApp(config);
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // update firestore settings
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="Auth Firebase/Register.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--End of Tawk.to Script-->
 </body>
 
