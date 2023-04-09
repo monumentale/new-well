@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-   "aos": "^2.3.4",
+    "aos": "^2.3.4",
     "axios": "^0.23.0",
     "emailjs-com": "^3.2.0",
     "firebase": "^8.2.7-canary.7772426b3",
@@ -20,6 +20,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^8.1.0",
+    "react-youtube": "^10.1.0",
     "sweetalert2": "^11.3.6",
     "web-vitals": "^2.1.4"
   },
