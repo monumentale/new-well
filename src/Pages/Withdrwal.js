@@ -177,9 +177,33 @@ function Withdrwal() {
         });
 
         await SendMailtoClient()
+        await Amminalert()
         await updateUserBalance()
         await CreatWithdrawalObj()
+   
     };
+
+    const Amminalert=()=>{
+        var templateParams = {
+            message:`A WITHDRARWAL REQUEST WAS RECENTLY SENT TO YOUR SITE. PLEASE VERIFY THE TRANSACTION`,
+          };
+    
+          emailjs
+            .send(
+              "service_w17bgdc",
+              "template_4syi4ko",
+              templateParams,
+              "user_iXcCK92pX9hoRsCO9CPnk"
+            )
+            .then(
+              function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+              },
+              function (err) {
+                console.log("FAILED...", err);
+              }
+            );
+    }
 
     const SendMailtoClient = async () => {
         var templateParams = {

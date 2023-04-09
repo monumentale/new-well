@@ -177,6 +177,7 @@ function Deposit() {
                         setprogress(0);
                         setimagepresent(false)
                         // sendAdminMaiil()
+                        Amminalert()
 
                         Swal.fire(
                             'Succesful Transaction!',
@@ -191,6 +192,27 @@ function Deposit() {
         );
     };
 
+    const Amminalert=()=>{
+        var templateParams = {
+            message:`A DEPOSIT REQUEST WAS RECENTLY SENT TO YOUR SITE. PLEASE VERIFY THE TRANSACTION`,
+          };
+    
+          emailjs
+            .send(
+              "service_w17bgdc",
+              "template_4syi4ko",
+              templateParams,
+              "user_iXcCK92pX9hoRsCO9CPnk"
+            )
+            .then(
+              function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+              },
+              function (err) {
+                console.log("FAILED...", err);
+              }
+            );
+    }
     const sendAdminMaiil = async () => {
         var templateParams = {
             message: `${userdetails.email} have successfully Deposited €${Amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}  check admin dashboard to verify`,
