@@ -185,6 +185,12 @@ function Subscribe() {
                                 };
                                 updateUserBalanceAndSub(newbal, subscription, SelectedInvestment.name, due);
                                 reffralCheck()
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: "Investment has been activated",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
                                 // handleClick2("activation of BASIC was successful");
                                 // }
                             } else {
