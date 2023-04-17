@@ -373,135 +373,167 @@ function Myinvestments() {
                                 <section class="section">
                                     <div class="container">
 
-                    
-                                    <div class="row align-items-stretch">
 
-<div class="col-lg-4 mb-4 mb-lg-0">
-    <div class="pricing h-100 text-center">
-        <span>&nbsp;</span>
-        <h3>STARTER PLAN</h3>
-        <ul class="list-unstyled">
-            <li>Minimun : EUR 50</li>
-            <li>Maximum: EUR 1,000</li>
-            <li>Profits: 10% daily</li>
+                                        <div class="row align-items-stretch">
 
-            <li>2 Days</li>
-            <li>
-                <form >
-                    <h5 className="text-dark">Insert Amount to invest</h5>
-                    <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
-                    <input type="hidden" name="duration" defaultValue="5 Months" />
-                    <input type="hidden" name="id" defaultValue={5} />
-                    <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
-                    <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("1") }} />
-                </form>
-            </li>
-        </ul>
-        <div class="price-cta">
-            <strong class="price">10% Profit</strong>
-            {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
-        </div>
-    </div>
-</div>
+                                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                                <div class="pricing h-100 text-center">
+                                                    <span>&nbsp;</span>
+                                                    <h3>STARTER PLAN</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li>Minimun : EUR 50</li>
+                                                        <li>Maximum: EUR 1,000</li>
+                                                        <li>Profits: 10% daily</li>
 
-
-
-
-<div class="col-lg-4 mb-4 mb-lg-0">
-    <div class="pricing h-100 text-center popular">
-        <span class="popularity">Most Popular</span>
-        <h3>STANDARD PLAN </h3>
-        <ul class="list-unstyled">
-            <li>Minimun : EUR 3,000</li>
-            <li>Maximum: EUR 5,000</li>
-            <li>Profits: 12.5% daily</li>
-
-            <li>3 Days</li>
-            <li>
-                <form >
-                    <h5 className="text-dark">Insert Amount to invest</h5>
-                    <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
-                    <input type="hidden" name="duration" defaultValue="5 Months" />
-                    <input type="hidden" name="id" defaultValue={5} />
-                    <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
-                    <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("2") }} />
-                </form>
-            </li>
-        </ul>
-        <div class="price-cta">
-            <strong class="price">12.5% Profit</strong>
-            {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
-        </div>
-    </div>
-</div>
-
-
-
-<div class="col-lg-4 mb-4 mb-lg-0">
-    <div class="pricing h-100 text-center">
-        <span class="popularity">Best Value</span>
-        <h3>PROFESSIONAL PLAN</h3>
-        <ul class="list-unstyled">
-            <li>Minimun : EUR 7,000</li>
-            <li>Maximum: EUR 10,000</li>
-            <li>Profits: 15%</li>
-
-            <li>After 5 days</li>
-            <li>
-                <form >
-                    <h5 className="text-dark">Insert Amount to invest</h5>
-                    <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
-                    <input type="hidden" name="duration" defaultValue="5 Months" />
-                    <input type="hidden" name="id" defaultValue={5} />
-                    <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
-                    <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("3") }} />
-                </form>
-            </li>
-        </ul>
-        <div class="price-cta">
-            <strong class="price">15% Profit</strong>
-            {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
-        </div>
-    </div>
-</div>
+                                                        <li>2 Days</li>
+                                                        <li>
+                                                            <form >
+                                                                <h5 className="text-dark">Insert Amount to invest</h5>
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="hidden" name="duration" defaultValue="5 Months" />
+                                                                <input type="hidden" name="id" defaultValue={5} />
+                                                                <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
+                                                                <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("1") }} />
+                                                            </form>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="price-cta">
+                                                        <strong class="price">10% Daily Profit</strong>
+                                                        {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
 
 
-<div class="col-lg-4 mb-4 mb-lg-0">
-    <div class="pricing h-100 text-center">
-        <span>&nbsp;</span>
-        <h3>BUSINESS PLAN</h3>
-        <ul class="list-unstyled">
-            <li>Minimun : EUR 50,000</li>
-            <li>Profits: 20% daily</li>
+                                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                                <div class="pricing h-100 text-center popular">
+                                                    <span class="popularity">Most Popular</span>
+                                                    <h3>STANDARD PLAN </h3>
+                                                    <ul class="list-unstyled">
+                                                        <li>Minimun : EUR 3,000</li>
+                                                        <li>Maximum: EUR 5,000</li>
+                                                        <li>Profits: 12.5% daily</li>
 
-            <li>After 7 days</li>
-            <li>
-                <form >
-                    <h5 className="text-dark">Insert Amount to invest</h5>
-                    <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
-                    <input type="hidden" name="duration" defaultValue="5 Months" />
-                    <input type="hidden" name="id" defaultValue={5} />
-                    <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
-                    <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("4") }} />
-                </form>
-            </li>
-        </ul>
-        <div class="price-cta">
-            <strong class="price">20% Profit</strong>
-            {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
-        </div>
-    </div>
-</div>
-
-
-
+                                                        <li>3 Days</li>
+                                                        <li>
+                                                            <form >
+                                                                <h5 className="text-dark">Insert Amount to invest</h5>
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="hidden" name="duration" defaultValue="5 Months" />
+                                                                <input type="hidden" name="id" defaultValue={5} />
+                                                                <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
+                                                                <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("2") }} />
+                                                            </form>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="price-cta">
+                                                        <strong class="price">12.5% Daily Profit</strong>
+                                                        {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
 
+                                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                                <div class="pricing h-100 text-center">
+                                                    <span class="popularity">Best Value</span>
+                                                    <h3>PROFESSIONAL PLAN</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li>Minimun : EUR 7,000</li>
+                                                        <li>Maximum: EUR 10,000</li>
+                                                        <li>Profits: 15%</li>
 
-</div>
+                                                        <li>After 5 days</li>
+
+                                                        <li>
+                                                            <form >
+                                                                <h5 className="text-dark">Insert Amount to invest</h5>
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="hidden" name="duration" defaultValue="5 Months" />
+                                                                <input type="hidden" name="id" defaultValue={5} />
+                                                                <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
+                                                                <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("3") }} />
+                                                            </form>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="price-cta">
+                                                        <strong class="price">15% Daily Profit</strong>
+                                                        {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                                <div class="pricing h-100 text-center">
+                                                    <span>&nbsp;</span>
+                                                    <h3>BUSINESS PLAN</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li>Minimun : EUR 20,000</li>
+                                                        <li>Maximum: EUR 30,000</li>
+                                                        <li>Profits: 20% daily</li>
+
+                                                        <li>After 7 days</li>
+                                                        <li>
+                                                            <form >
+                                                                <h5 className="text-dark">Insert Amount to invest</h5>
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="hidden" name="duration" defaultValue="5 Months" />
+                                                                <input type="hidden" name="id" defaultValue={5} />
+                                                                <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
+                                                                <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("4") }} />
+                                                            </form>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="price-cta">
+                                                        <strong class="price">20% Daily Profit</strong>
+                                                        {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                                <div class="pricing h-100 text-center">
+                                                    <span>&nbsp;</span>
+                                                    <h3>BUSINESS PLAN</h3>
+                                                    <h3>SPECIAL BUSINESS PLAN</h3>
+                                                    <ul class="list-unstyled">
+                                                        <li>Minimun : EUR 50,000</li>
+                                                        <li>Maximum: unlimited</li>
+                                                        <li>Profits: 20% daily</li>
+
+                                                        <li>After 10 days</li>
+                                                        <li>
+                                                            <form >
+                                                                <h5 className="text-dark">Insert Amount to invest</h5>
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="hidden" name="duration" defaultValue="5 Months" />
+                                                                <input type="hidden" name="id" defaultValue={5} />
+                                                                <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
+                                                                <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("5") }} />
+                                                            </form>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="price-cta">
+                                                        <strong class="price">20% Daily Profit</strong>
+                                                        {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+                                        </div>
                                     </div>
                                 </section>
                             </div>
