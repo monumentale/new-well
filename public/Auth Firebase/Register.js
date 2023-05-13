@@ -56,22 +56,61 @@ signupForm.addEventListener('submit', (e) => {
                         .doc(userobj.user.uid)
                         .set(uobj)
                         .then(function () {
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Registration was sucessfull',
-                                text: 'Thank you',
-                                // footer: '<a href="">Why do I have this issue?</a>'
-                            })
+                            var templateParams = {
+                                to_name: name,
+                                message:
+                                    ` <div style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;
+                                   mso-line-height-rule: exactly; font-family: arial,'helvetica neue', helvetica, sans-serif; line-height: 21px; color: #333333;
+                                   font-size: 14px;">Your account verification has been successfully approved by our system. this is to officially welcome you to the best investment platform , feel free to explore the platform and earn daily. our help desk are ever willing to assist you in navigating the platform so you can make the best out of it.
+                                   <br>
+                                   kindly login to your account now to enjoiy the benefits of being among this big happy  family.
+                                   <br>
+                                   cheers
+                                  </div>`,
+
+                                user_email: email,
+                                notification: "Email Verified"
+                                // date: moment().format("MMM Do YY")
+                            };
+
+                            emailjs.send('service_xv9wg0l', 'template_xr42nzq', templateParams)
+                                .then(function (response) {
+                                    console.log('SUCCESS!', response.status, response.text);
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Registration was sucessfull',
+                                        text: 'Thank you',
+                                        // footer: '<a href="">Why do I have this issue?</a>'
+                                    })
 
 
-                            auth.onAuthStateChanged(user => {
-                                if (user) {
-                                    console.log(user)
-                                    window.location.replace("/dashboard");
-                                } else {
-                                    console.log(" no user")
-                                }
-                            })
+                                    auth.onAuthStateChanged(user => {
+                                        if (user) {
+                                            console.log(user)
+                                            window.location.replace("/dashboard");
+                                        } else {
+                                            console.log(" no user")
+                                        }
+                                    })
+                                }, function (error) {
+                                    console.log('FAILED...', error);
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Registration was sucessfull',
+                                        text: 'Thank you',
+                                        // footer: '<a href="">Why do I have this issue?</a>'
+                                    })
+
+
+                                    auth.onAuthStateChanged(user => {
+                                        if (user) {
+                                            console.log(user)
+                                            window.location.replace("/dashboard");
+                                        } else {
+                                            console.log(" no user")
+                                        }
+                                    })
+                                });
 
                         })
                         .catch(function (error) {

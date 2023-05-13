@@ -43,7 +43,7 @@ function Deposit() {
 
             setCoinInfo({
                 name: "Bitcoin",
-                address: "bc1qa0whllqsjuftmxl6p3g4tfwm4f2c6cdrsqyfym",
+                address: "bc1qhpyq9c99we2fkselycxu2qeykj08sl73aqunzm",
                 img: "https://img.icons8.com/color/48/000000/bitcoin--v1.png"
             })
         } else if (value == 2) {
@@ -88,7 +88,7 @@ function Deposit() {
             })
             setCoinInfo({
                 name: "Tron",
-                address: "THZu81uaNZ4ywfEQhzfe5y9aNFn3pEoht4",
+                address: "TGvHsQ5Muu4RxLM4F7KNf8CkS6M1XF4drh",
                 https: "https://img.icons8.com/cotton/344/tron.png"
             })
 
@@ -118,7 +118,7 @@ function Deposit() {
             })
             setCoinInfo({
                 name: "USDT TRC20",
-                address: "THZu81uaNZ4ywfEQhzfe5y9aNFn3pEoht4",
+                address: "TGvHsQ5Muu4RxLM4F7KNf8CkS6M1XF4drh",
                 https: "https://img.icons8.com/color/344/tether--v2.png"
             })
 
@@ -213,15 +213,14 @@ function Deposit() {
               }
             );
     }
+
     const sendAdminMaiil = async () => {
         var templateParams = {
             message: `${userdetails.email} have successfully Deposited €${Amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}  check admin dashboard to verify`,
         };
 
-        // setloading(false)
-        //handleClick1()
-
-        await emailjs
+        setloading(false)
+        emailjs
             .send(
                 "service_xv9wg0l",
                 "template_xr42nzq",
@@ -230,11 +229,30 @@ function Deposit() {
             )
             .then(
                 function (response) {
-                    // setloading(false)
+                    setloading(false)
+
+
                 },
                 function (err) {
-                    // setloading(false)
-                    alert("FAILED...", err);
+                    emailjs
+                        .send(
+                            "service_j65c2i3",
+                            "template_qdy2w4q",
+                            templateParams,
+                            "m26d9Dc2HdsUq8B7n"
+                        )
+                        .then(
+                            function (response) {
+                                setloading(false)
+
+                            },
+                            function (err) {
+                                setloading(false)
+                                alert("FAILED...", err);
+                                console.log(err)
+                            }
+                        );
+                    console.log(err)
                 }
             );
     }
@@ -416,7 +434,7 @@ function Deposit() {
                                                                                     </div>
                                                                                 </a>
                                                                             </div>
-                                                                            <div className="mb-2 col-md-6" onClick={() => { SetCoinInfo(2) }}>
+                                                                            {/* <div className="mb-2 col-md-6" onClick={() => { SetCoinInfo(2) }}>
                                                                                 <a style={{ cursor: 'pointer' }} data-method="Bitcoin" id={1} className="text-decoration-none" >
                                                                                     <div className="rounded shadow bg-light">
                                                                                         <div className="card-body">
@@ -428,9 +446,9 @@ function Deposit() {
                                                                                         </div>
                                                                                     </div>
                                                                                 </a>
-                                                                            </div>
+                                                                            </div> */}
 
-                                                                            <div className="mb-2 col-md-6" onClick={() => { SetCoinInfo(3) }}>
+                                                                            {/* <div className="mb-2 col-md-6" onClick={() => { SetCoinInfo(3) }}>
                                                                                 <a style={{ cursor: 'pointer' }} data-method="Bitcoin" id={1} className="text-decoration-none" >
                                                                                     <div className="rounded shadow bg-light" >
                                                                                         <div className="card-body">
@@ -441,8 +459,8 @@ function Deposit() {
                                                                                         </div>
                                                                                     </div>
                                                                                 </a>
-                                                                            </div>
-                                                                            <div className="mb-2 col-md-6" onClick={() => { SetCoinInfo(4) }}>
+                                                                            </div> */}
+                                                                            {/* <div className="mb-2 col-md-6" onClick={() => { SetCoinInfo(4) }}>
                                                                                 <a style={{ cursor: 'pointer' }} data-method="Bitcoin" id={1} className="text-decoration-none" >
                                                                                     <div className="rounded shadow bg-light">
                                                                                         <div className="card-body">
@@ -453,9 +471,9 @@ function Deposit() {
                                                                                         </div>
                                                                                     </div>
                                                                                 </a>
-                                                                            </div>
+                                                                            </div> */}
 
-                                                                            <div className="mb-2 col-md-6" onClick={() => { SetCoinInfo(5) }}>
+                                                                            {/* <div className="mb-2 col-md-6" onClick={() => { SetCoinInfo(5) }}>
                                                                                 <a style={{ cursor: 'pointer' }} data-method="Bitcoin" id={1} className="text-decoration-none" >
                                                                                     <div className="rounded shadow bg-light">
                                                                                         <div className="card-body">
@@ -466,7 +484,7 @@ function Deposit() {
                                                                                         </div>
                                                                                     </div>
                                                                                 </a>
-                                                                            </div>
+                                                                            </div> */}
 
                                                                             <div className="mb-2 col-md-6" onClick={() => { SetCoinInfo(6) }}>
                                                                                 <a style={{ cursor: 'pointer' }} data-method="Bitcoin" id={1} className="text-decoration-none" >

@@ -83,35 +83,35 @@ function Myinvestments() {
     const investments = [
         {
             id: "1",
-            name: "STARTER PLAN",
+            name: "BASIC PLAN",
             minimum: "50",
-            Maximum: "1000",
-            profits: "10",
-            duration: "2"
+            Maximum: "15000",
+            profits: "2",
+            duration: "6"
         },
         {
             id: "2",
             name: "STANDARD PLAN ",
-            minimum: "3000",
-            Maximum: "5000",
-            profits: "12.5",
-            duration: "3"
+            minimum: "15000",
+            Maximum: "40000",
+            profits: "2.5",
+            duration: "6"
         },
         {
             id: "3",
-            name: "PROFESSIONAL PLAN",
-            minimum: "6000",
-            Maximum: "10000",
-            profits: "15",
-            duration: "5"
+            name: "PREMIUM PLAN",
+            minimum: "40000",
+            Maximum: "80000",
+            profits: "3.5",
+            duration: "6"
         },
         {
             id: "4",
-            name: "BUSSINESS PLAN",
+            name: "COMPOUND PLAN",
             minimum: "20000",
             Maximum: "1000000000000000",
-            profits: "20",
-            duration: "7"
+            profits: "4",
+            duration: "60"
         }
     ]
     const reffralCheck = () => {
@@ -375,17 +375,19 @@ function Myinvestments() {
 
 
                                         <div class="row align-items-stretch">
-
                                             <div class="col-lg-4 mb-4 mb-lg-0">
                                                 <div class="pricing h-100 text-center">
                                                     <span>&nbsp;</span>
-                                                    <h3>STARTER PLAN</h3>
+                                                    <h3>BASIC PLAN</h3>
                                                     <ul class="list-unstyled">
                                                         <li>Minimun : EUR 50</li>
-                                                        <li>Maximum: EUR 1,000</li>
-                                                        <li>Profits: 10% daily</li>
+                                                        <li>Maximum: EUR 51,000</li>
+                                                        <li>Profits: 2% daily</li>
 
-                                                        <li>2 Days</li>
+                                                        <li>ROI:12%</li>
+                                                        <li>REFERRAL COMMISSION:5%</li>
+
+                                                        <li>Trading Period:6 Days</li>
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
@@ -398,7 +400,7 @@ function Myinvestments() {
                                                         </li>
                                                     </ul>
                                                     <div class="price-cta">
-                                                        <strong class="price">10% Daily Profit</strong>
+                                                        <strong class="price">2% Daily Profit</strong>
                                                         {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
                                                     </div>
                                                 </div>
@@ -412,11 +414,12 @@ function Myinvestments() {
                                                     <span class="popularity">Most Popular</span>
                                                     <h3>STANDARD PLAN </h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : EUR 3,000</li>
-                                                        <li>Maximum: EUR 5,000</li>
-                                                        <li>Profits: 12.5% daily</li>
-
-                                                        <li>3 Days</li>
+                                                        <li>Minimun : EUR 15,000</li>
+                                                        <li>Maximum: EUR 40,000</li>
+                                                        <li>Profits: 2.5% daily</li>
+                                                        <li>ROI:15%</li>
+                                                        <li>REFERRAL COMMISSION:5%</li>
+                                                        <li>Trading Period:6 Days</li>
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
@@ -429,7 +432,7 @@ function Myinvestments() {
                                                         </li>
                                                     </ul>
                                                     <div class="price-cta">
-                                                        <strong class="price">12.5% Daily Profit</strong>
+                                                        <strong class="price">2.5% Daily Profit</strong>
                                                         {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
                                                     </div>
                                                 </div>
@@ -442,11 +445,13 @@ function Myinvestments() {
                                                     <span class="popularity">Best Value</span>
                                                     <h3>PROFESSIONAL PLAN</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : EUR 7,000</li>
-                                                        <li>Maximum: EUR 10,000</li>
-                                                        <li>Profits: 15%</li>
+                                                        <li>Minimun : EUR 40,000</li>
+                                                        <li>Maximum: EUR 80,000</li>
+                                                        <li>Profits: 3.5%</li>
+                                                        <li>ROI:21%</li>
+                                                        <li>REFERRAL COMMISSION:5%</li>
+                                                        <li>Trading Period:6 days</li>
 
-                                                        <li>After 5 days</li>
 
                                                         <li>
                                                             <form >
@@ -460,7 +465,7 @@ function Myinvestments() {
                                                         </li>
                                                     </ul>
                                                     <div class="price-cta">
-                                                        <strong class="price">15% Daily Profit</strong>
+                                                        <strong class="price">3.5% Daily Profit</strong>
                                                         {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
                                                     </div>
                                                 </div>
@@ -474,11 +479,12 @@ function Myinvestments() {
                                                     <span>&nbsp;</span>
                                                     <h3>BUSINESS PLAN</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : EUR 20,000</li>
-                                                        <li>Maximum: EUR 30,000</li>
-                                                        <li>Profits: 20% daily</li>
-
-                                                        <li>After 7 days</li>
+                                                        <li>Minimun : EUR 25,000</li>
+                                                        <li>Maximum: EUR UNLIMITED</li>
+                                                        <li>Profits: 4% daily</li>
+                                                        <li>ROI:240%</li>
+                                                        <li>REFERRAL COMMISSION:10%</li>
+                                                        <li>Trading Period: 60 days</li>
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
@@ -491,41 +497,13 @@ function Myinvestments() {
                                                         </li>
                                                     </ul>
                                                     <div class="price-cta">
-                                                        <strong class="price">20% Daily Profit</strong>
+                                                        <strong class="price">4% Daily Profit</strong>
                                                         {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
                                                     </div>
                                                 </div>
                                             </div>
 
 
-                                            <div class="col-lg-4 mb-4 mb-lg-0">
-                                                <div class="pricing h-100 text-center">
-                                                    <span>&nbsp;</span>
-                                                    <h3>BUSINESS PLAN</h3>
-                                                    <h3>SPECIAL BUSINESS PLAN</h3>
-                                                    <ul class="list-unstyled">
-                                                        <li>Minimun : EUR 50,000</li>
-                                                        <li>Maximum: unlimited</li>
-                                                        <li>Profits: 20% daily</li>
-
-                                                        <li>After 10 days</li>
-                                                        <li>
-                                                            <form >
-                                                                <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
-                                                                <input type="hidden" name="duration" defaultValue="5 Months" />
-                                                                <input type="hidden" name="id" defaultValue={5} />
-                                                                <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
-                                                                <input className="btn btn-block pricing-action btn-primary" defaultValue="Join plan" onClick={() => { planactivation("5") }} />
-                                                            </form>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="price-cta">
-                                                        <strong class="price">20% Daily Profit</strong>
-                                                        {/* <p><a href="#" class="btn btn-white">Choose Plan</a></p> */}
-                                                    </div>
-                                                </div>
-                                            </div>
 
 
 
