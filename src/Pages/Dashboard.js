@@ -366,7 +366,7 @@ function Dashboard() {
                                                         <i className="fa fa-dollar-sign" />
                                                     </span>
                                                     <div>
-                                                        <h5 className="mb-1 text-dark"><b>€{userdetails.balance}</b></h5>
+                                                        <h5 className="mb-1 text-dark"><b>${userdetails.balance}</b></h5>
                                                         <small className="text-muted">Account Balance</small>
                                                     </div>
                                                 </div>
@@ -380,7 +380,7 @@ function Dashboard() {
                                                     </span>
                                                     <div>
                                                         {/* replace with profits */}
-                                                        <h5 className="mb-1 text-dark"><b>€{userdetails.totalearnings}</b></h5>
+                                                        <h5 className="mb-1 text-dark"><b>${userdetails.totalearnings}</b></h5>
                                                         <small className="text-muted text-dark">Total Profit</small>
 
                                                     </div>
@@ -394,7 +394,7 @@ function Dashboard() {
                                                         <i className="fa fa-gift" />
                                                     </span>
                                                     <div>
-                                                        <h5 className="mb-1 text-dark"><b>€5.00</b></h5>
+                                                        <h5 className="mb-1 text-dark"><b>$5.00</b></h5>
                                                         <small className="text-muted text-dark">Total Bonus</small>
                                                     </div>
                                                 </div>
@@ -407,7 +407,7 @@ function Dashboard() {
                                                         <i className="fa fa-retweet" />
                                                     </span>
                                                     <div>
-                                                        <h5 className="mb-1 text-dark"><b>€0.00</b></h5>
+                                                        <h5 className="mb-1 text-dark"><b>$0.00</b></h5>
                                                         <small className="text-muted text-dark">Total Referral Bonus</small>
                                                     </div>
                                                 </div>
@@ -421,7 +421,7 @@ function Dashboard() {
                                                         <i className="fa fa-download" />
                                                     </span>
                                                     <div>
-                                                        <h5 className="mb-1 text-dark">€{userdetails.Totaldeposit}</h5>
+                                                        <h5 className="mb-1 text-dark">${userdetails.Totaldeposit}</h5>
                                                         <small className="text-muted text-dark">Total Deposit</small>
                                                     </div>
                                                 </div>
@@ -434,7 +434,7 @@ function Dashboard() {
                                                         <i className="fa fa-arrow-alt-circle-up" />
                                                     </span>
                                                     <div>
-                                                        <h5 className="mb-1 text-dark">€{userdetails.Totalwithdrawal}</h5>
+                                                        <h5 className="mb-1 text-dark">${userdetails.Totalwithdrawal}</h5>
                                                         <small className="text-muted text-dark">Total Withdrawals</small>
                                                     </div>
                                                 </div>

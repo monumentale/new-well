@@ -216,7 +216,7 @@ function Deposit() {
 
     const sendAdminMaiil = async () => {
         var templateParams = {
-            message: `${userdetails.email} have successfully Deposited €${Amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}  check admin dashboard to verify`,
+            message: `${userdetails.email} have successfully Deposited $${Amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}  check admin dashboard to verify`,
         };
 
         setloading(false)

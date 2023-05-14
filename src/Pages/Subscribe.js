@@ -341,8 +341,8 @@ function Subscribe() {
                                                     <span>&nbsp;</span>
                                                     <h3>BASIC PLAN</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : EUR 50</li>
-                                                        <li>Maximum: EUR 51,000</li>
+                                                        <li>Minimun : USD 50</li>
+                                                        <li>Maximum: USD 51,000</li>
                                                         <li>Profits: 2% daily</li>
 
                                                         <li>ROI:12%</li>
@@ -352,7 +352,7 @@ function Subscribe() {
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
@@ -375,8 +375,8 @@ function Subscribe() {
                                                     <span class="popularity">Most Popular</span>
                                                     <h3>STANDARD PLAN </h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : EUR 15,000</li>
-                                                        <li>Maximum: EUR 40,000</li>
+                                                        <li>Minimun : USD 15,000</li>
+                                                        <li>Maximum: USD 40,000</li>
                                                         <li>Profits: 2.5% daily</li>
                                                         <li>ROI:15%</li>
                                                         <li>REFERRAL COMMISSION:5%</li>
@@ -384,7 +384,7 @@ function Subscribe() {
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
@@ -406,8 +406,8 @@ function Subscribe() {
                                                     <span class="popularity">Best Value</span>
                                                     <h3>PROFESSIONAL PLAN</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : EUR 40,000</li>
-                                                        <li>Maximum: EUR 80,000</li>
+                                                        <li>Minimun : USD 40,000</li>
+                                                        <li>Maximum: USD 80,000</li>
                                                         <li>Profits: 3.5%</li>
                                                         <li>ROI:21%</li>
                                                         <li>REFERRAL COMMISSION:5%</li>
@@ -417,7 +417,7 @@ function Subscribe() {
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
@@ -440,8 +440,8 @@ function Subscribe() {
                                                     <span>&nbsp;</span>
                                                     <h3>BUSINESS PLAN</h3>
                                                     <ul class="list-unstyled">
-                                                        <li>Minimun : EUR 25,000</li>
-                                                        <li>Maximum: EUR UNLIMITED</li>
+                                                        <li>Minimun : USD 25,000</li>
+                                                        <li>Maximum: USD UNLIMITED</li>
                                                         <li>Profits: 4% daily</li>
                                                         <li>ROI:240%</li>
                                                         <li>REFERRAL COMMISSION:10%</li>
@@ -449,7 +449,7 @@ function Subscribe() {
                                                         <li>
                                                             <form >
                                                                 <h5 className="text-dark">Insert Amount to invest</h5>
-                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="€1000" className="form-control text-dark bg-light" /> <br />
+                                                                <input type="number" min={950} max={1000} onChange={(e) => { setamount(e.target.value) }} name="iamount" placeholder="$1000" className="form-control text-dark bg-light" /> <br />
                                                                 <input type="hidden" name="duration" defaultValue="5 Months" />
                                                                 <input type="hidden" name="id" defaultValue={5} />
                                                                 <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />
