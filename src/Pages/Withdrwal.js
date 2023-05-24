@@ -24,7 +24,7 @@ function Withdrwal() {
     const [coin, setcoin] = useState("")
     const [wallet, setwallet] = useState("")
     const [loading, setloading] = useState(true)
-    const [investmentselected, setinvestmentselected] = useState("")
+    const [investmentselected, setinvestmentselected] = useState("Withdrawal")
     const navigate = useNavigate()
     const [{ userdetails, loggedin, tradingpair, selectedinvestment }, dispatch] = useContext(GlobalContext);
 
@@ -127,7 +127,7 @@ function Withdrwal() {
                 wallet: wallet,
                 coin: coin,
                 status: "pending",
-                investment: investmentselected
+                // investment: investmentselected
 
             }
         };
@@ -143,7 +143,9 @@ function Withdrwal() {
     };
     const updatewithdrawalhistory = async () => {
 
-        if (coin == "" || Amount == "" || investmentselected == "") {
+        if (coin == "" || Amount == "" 
+        || investmentselected == ""
+        ) {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
@@ -403,7 +405,7 @@ function Withdrwal() {
                                             </div>
 
 
-
+{/* 
                                             <div className="col-lg-4">
                                                 <div className="p-3 rounded card bg-light">
                                                     <div className="card-body border-danger">
@@ -509,7 +511,7 @@ function Withdrwal() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> */}
 
 
                                             <div className="col-lg-4">
@@ -599,7 +601,7 @@ function Withdrwal() {
                                                                 <input className="form-control text-dark bg-light" placeholder="Enter your wallet address" type="text" name="otpcode" onChange={(e) => { setwallet(e.target.value) }} required />
                                                                 {/* <small className="text-dark">OTP will be sent to your email when you request</small> */}
                                                             </div>
-                                                            <div className="form-group">
+                                                            {/* <div className="form-group">
                                                                 <h5 className="text-dark">Select Investment plan to withdraw</h5>
                                                                 <select className="form-control text-dark bg-light" onChange={(e) => { setinvestmentselected(e.target.value) }} required>
                                                                     <option value="Standard Plan">Standard Plan</option>
@@ -611,8 +613,7 @@ function Withdrwal() {
                                                                     <option value="REAL ESTATE CONTRACT">REAL ESTATE CONTRACT</option>
                                                                 </select>
 
-                                                                {/* <small className="text-dark">OTP will be sent to your email when you request</small> */}
-                                                            </div>
+                                                            </div> */}
                                                             <div className="form-group">
                                                                 <button className="btn btn-primary" type="button" onClick={confirmWitdrawal}>Complete Request</button>
                                                             </div>
