@@ -406,30 +406,6 @@ function Withdrwal() {
 
 
 {/* 
-                                            <div className="col-lg-4">
-                                                <div className="p-3 rounded card bg-light">
-                                                    <div className="card-body border-danger">
-                                                        <h2 className="card-title mb-3 text-dark"> Ethereum</h2>
-                                                        <h4 className="text-dark">Minimum amount: <strong style={{ float: 'right' }}> $10</strong></h4><br />
-                                                        <h4 className="text-dark">Maximum amount:<strong style={{ float: 'right' }}> $10,000,000</strong></h4><br />
-                                                        <h4 className="text-dark">Charge Type:<strong style={{ float: 'right' }}>percentage</strong></h4><br />
-                                                        <h4 className="text-dark">Charges Amount:
-                                                            <strong style={{ float: 'right' }}>
-                                                                0%
-                                                            </strong>
-                                                        </h4><br />
-                                                        <h4 className="text-dark">Duration:<strong style={{ float: 'right' }}> Instant</strong></h4><br />
-                                                        <div className="text-center">
-                                                            <form >
-                                                                <input type="hidden" name="_token" defaultValue="zn8v4I2d4bZyK4wpUA2IxCApAntbf4ODlmrnGzIz" />											<div className="form-group">
-                                                                    <input type="hidden" defaultValue="Bitcoin" name="method" />
-                                                                    <button className="btn btn-primary" type="button" onClick={() => { ProceedToWithdrwal("Ethereum") }} ><i className="fa fa-plus" /> Request withdrawal</button>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
 
 
 
