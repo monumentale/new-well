@@ -13,15 +13,17 @@ import emailjs from "emailjs-com";
 
 function Referral() {
 
-    const [{ userdetails, loggedin, tradingpair, selectedinvestment }, dispatch] = useContext(GlobalContext);
-    const navigate = useNavigate();
+    const [{ userdetails, loggedin, tradingpair, openorders }, dispatch] = useContext(GlobalContext);
+    const history = useNavigate();
     const [loading, setloading] = useState(true)
-    const [amount, setamount] = useState("")
+    const [dataready, setdataready] = useState(false)
+    const [nameOfReferral, setnameOfReferral] = useState("none")
     useEffect(() => {
         if (loggedin) {
             console.log(userdetails);
             console.log(userdetails.email);
             setloading(false)
+            notereferral()
         } else {
             f.auth().onAuthStateChanged(function (user) {
                 if (user) {
@@ -33,38 +35,83 @@ function Referral() {
                 } else {
                     setloggedin(false);
                     setloading(false)
-                    navigate("/");
+                    history("/");
                 }
             });
         }
-
-        let myDate = new Date();
-        console.log(myDate.getTime())
-        console.log(addHoursToDate(myDate, 24).getTime())
-        console.log(myDate)
-        console.log(addHoursToDate(myDate, 1))
-        new Date(new Date(myDate).setHours(myDate.getHours() + 20)).getTime()
     }, []);
 
+    const notereferral = async () => {
+        if (userdetails.referreduserid == "none") {
+            console.log("no user to refer")
+            return
+        } else {
 
-    function addHoursToDate(date, hours) {
-        return new Date(new Date(date).setHours(date.getHours() + hours));
+            var docRef = await db.collection("users").doc(userdetails.referreduserid);
+            await docRef
+                .get()
+                .then(function (doc) {
+                    if (doc.exists) {
+                        console.log(doc.data())
+                       setnameOfReferral(doc.data().fullname                       )
+                    } else {
+                        // doc.data() will be undefined in this case
+                        console.log("No such document!");
+                    }
+                })
+                .catch(function (error) {
+                    console.log("Error getting document:", error);
+                });
+
+
+        }
     }
+
+    const notereferralD = async (data) => {
+        if (data.referreduserid == "none") {
+            console.log("no user to refer")
+            return
+        } else {
+
+            var docRef = await db.collection("users").doc(data.referreduserid);
+            await docRef
+                .get()
+                .then(function (doc) {
+                    if (doc.exists) {
+                        console.log(doc.data())
+                       setnameOfReferral(doc.data().fullname                       )
+                    } else {
+                        // doc.data() will be undefined in this case
+                        console.log("No such document!");
+                    }
+                })
+                .catch(function (error) {
+                    console.log("Error getting document:", error);
+                });
+
+
+        }
+    }
+
 
     const fetchuserdata = async (userid) => {
         var docRef = db.collection("users").doc(userid);
         const fetching = await docRef
-            .onSnapshot((function (doc) {
+            .get()
+            .then(function (doc) {
                 if (doc.exists) {
                     setdetails(doc.data());
-                    console.log(doc.data())
                     setloading(false)
+                    setdataready(true)
+                    notereferralD(doc.data())
                 } else {
                     console.log("No such document!");
+                    setloading(false)
                 }
             })
-            )
-
+            .catch(function (error) {
+                console.log("Error getting document:", error);
+            });
     };
 
     const setdetails = (data) => {
@@ -120,7 +167,7 @@ function Referral() {
                                                 <h3 className="title1">
                                                     <small>You were referred by</small><br />
                                                     <i className="fa fa-user fa-2x" /><br />
-                                                    <small>null</small>
+                                                    <small>{nameOfReferral}</small>
                                                 </h3>
                                             </div>
                                             <div className="mt-4 col-md-12">
@@ -130,13 +177,27 @@ function Referral() {
                                                         <thead>
                                                             <tr>
                                                                 <th>Client name</th>
-                                                                <th>Ref. level</th>
-                                                                <th>Parent</th>
+                                                                <th>email</th>
                                                                 <th>Client status</th>
                                                                 <th>Date registered</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        {
+                                                                dataready && (
+                                                                    userdetails.referrals.map((obj, i) => (
+
+                                                                        <tr className="del237">
+                                                                            <td>{obj.name}</td>
+                                                                            <td>{obj.email}</td>
+                                                                            <td>active</td>
+                                                                            <td>{new Date(obj.date).toDateString()}</td>
+                                                                        </tr>
+
+                                                                    ))
+
+                                                                )
+                                                            }
                                                         </tbody>
                                                     </table>
                                                 </div>

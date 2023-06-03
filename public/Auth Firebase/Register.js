@@ -12,7 +12,7 @@ signupForm.addEventListener('submit', (e) => {
     const email = signupForm['signup-email'].value;
     const password = signupForm['signup-password'].value;
     const name = signupForm['signup-name'].value;
-    const referralID = referralid != null ? referralid : "nnnnn"
+    const referralID = referralid != null ? referralid : "none"
 
 
     // sign up the user
@@ -56,6 +56,35 @@ signupForm.addEventListener('submit', (e) => {
                         .doc(userobj.user.uid)
                         .set(uobj)
                         .then(function () {
+
+
+                            // REFERALL CHECK
+                            // const increment = firebase.firestore.FieldValue.increment(5);
+                            if (referralID == "none") {
+                                console.log("no user to refer")
+                                return
+                            } else {
+                                var washingtonRef = db.collection("users").doc(referralID);
+                                washingtonRef.update({
+                                    referrals: firebase.firestore.FieldValue.arrayUnion({
+                                        name: name,
+                                        email: email,
+                                        date: Date.now(),
+                                        referral: referralID
+                                    }),
+                                    // promotionalbalance: increment,
+                                    // balance: increment,
+                                    // referralearn: increment,
+                                    // promotionalbalance: increment,
+
+                                });
+                                // setbalance("50")
+                                // Email Admin with new update
+                            }
+                            // REFERALL CHECK
+
+
+
                             var templateParams = {
                                 to_name: name,
                                 message:
@@ -111,6 +140,15 @@ signupForm.addEventListener('submit', (e) => {
                                         }
                                     })
                                 });
+
+
+
+
+
+
+
+
+
 
                         })
                         .catch(function (error) {

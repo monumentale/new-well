@@ -87,7 +87,8 @@ function Myinvestments() {
             minimum: "50",
             Maximum: "15000",
             profits: "2",
-            duration: "6"
+            duration: "6",
+            referralBonus:"5"
         },
         {
             id: "2",
@@ -95,7 +96,8 @@ function Myinvestments() {
             minimum: "15000",
             Maximum: "40000",
             profits: "2.5",
-            duration: "6"
+            duration: "6",
+            referralBonus:"5"
         },
         {
             id: "3",
@@ -103,7 +105,8 @@ function Myinvestments() {
             minimum: "40000",
             Maximum: "80000",
             profits: "3.5",
-            duration: "6"
+            duration: "6",
+            referralBonus:"5"
         },
         {
             id: "4",
@@ -111,16 +114,52 @@ function Myinvestments() {
             minimum: "20000",
             Maximum: "1000000000000000",
             profits: "4",
-            duration: "60"
+            duration: "60",
+            referralBonus:"10"
         }
     ]
-    const reffralCheck = () => {
-        if (userdetails.referreduserid == "nnnnn") {
+
+    
+
+    // const notereferral = async (amount) => {
+    //     const increment = await firebase.firestore.FieldValue.increment(10);
+    //     if (singleuser.referreduserid == "none") {
+    //         console.log("no user to refer")
+    //         return
+    //     } else {
+
+    //         var docRef = await db.collection("users").doc(singleuser.referreduserid);
+    //         await docRef
+    //             .get()
+    //             .then(function (doc) {
+    //                 if (doc.exists) {
+    //                     console.log(doc.data())
+    //                     var washingtonRef = db.collection("users").doc(singleuser.referreduserid);
+    //                     washingtonRef.update({
+    //                        balance: parseFloat(doc.data().balance) + ((parseFloat(amount) * 10) / 100),
+    //                         referralearn: (amount * 10) / 100
+
+    //                     });
+    //                 } else {
+    //                     // doc.data() will be undefined in this case
+    //                     console.log("No such document!");
+    //                 }
+    //             })
+    //             .catch(function (error) {
+    //                 console.log("Error getting document:", error);
+    //             });
+
+
+    //     }
+    // }
+
+    const reffralCheck = (bonus) => {
+        if (userdetails.referreduserid == "none") {
             console.log("np reffreal")
         } else {
             //increament referreduserid balance with 5% of invested amount
             var washingtonRef = db.collection("users").doc(userdetails.referreduserid);
-            const increment = firebase.firestore.FieldValue.increment((5 * parseInt(amount)) / 100);
+            const increment = firebase.firestore.FieldValue.increment((parseInt(bonus) * parseInt(amount)) / 100);
             washingtonRef
                 .update({
                     balance: increment
@@ -132,7 +171,7 @@ function Myinvestments() {
                     // set referreduserid to "nnnnn" 
                     washingtonRef2
                         .update({
-                            referreduserid: "nnnnn"
+                            referreduserid: "none"
                         })
 
                 })
@@ -186,7 +225,7 @@ function Myinvestments() {
                                     dateSubscribed: new Date().getTime(),
                                 };
                                 updateUserBalanceAndSub(newbal, subscription, SelectedInvestment.name, due);
-                                reffralCheck()
+                                reffralCheck(SelectedInvestment.referralBonus)
                                 Swal.fire({
                                     icon: 'success',
                                     title: "Investment has been activated",
@@ -264,6 +303,8 @@ function Myinvestments() {
 
 
     const updateUserBalanceAndSub = (bal, subsription, plans, intrest) => {
+        
+
         var userid = f.auth().currentUser;
         var userids = userid.uid;
         var washingtonRef = db.collection("users").doc(userids);
