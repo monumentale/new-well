@@ -47,6 +47,18 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script type="text/javascript">
+      /*<![CDATA[*/
+      function initializeGoogleTranslateElement() {
+        new google.translate.TranslateElement({
+          pageLanguage: "en",
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          includedLanguages: "zh-CN,zh-TW,hr,cs,da,nl,en,tl,fi,fr,ka,de,el,is,ig,id,it,ko,no,fa,pl,pt,ro,ru,es,tr,uk"
+        }, "google_translate_element");
+      }
+      /*]]>*/
+    </script>
+    <script type="text/javascript" src="translate_a/element.js"></script>
 </head>
 
 <body>
